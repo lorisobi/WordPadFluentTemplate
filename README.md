@@ -13,7 +13,7 @@ Please create an issue, if you find an error / mistake / have an idea.
 
 I am no dev but an designer. That's why there will be bad structuring or bad xaml.
 
-##Credit
+## Credit
 
 Best Thanks to the people on the FluentDesignHub Discord Server (https://discord.gg/RTG4Fqnm5S), especially the following:
 
