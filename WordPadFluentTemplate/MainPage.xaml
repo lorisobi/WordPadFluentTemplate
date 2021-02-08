@@ -1,0 +1,334 @@
+﻿<Page
+    x:Class="WordPadFluentTemplate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Padding="0" Background="Transparent">
+        <Grid
+            Height="125px"
+            VerticalAlignment="Top"
+            Background="{ThemeResource SystemChromeLowColor}"
+            BorderThickness="0,0,0,1">
+
+            <Grid Height="50" VerticalAlignment="Top">
+                <Grid
+                    x:Name="AppTitleBar"
+                    Height="50"
+                    VerticalAlignment="Top"
+                    Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="LeftPaddingColumn" Width="0" />
+                        <ColumnDefinition />
+                        <ColumnDefinition x:Name="RightPaddingColumn" Width="0" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <StackPanel
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+                    <Button
+                        Height="50"
+                        Padding="15,0,15,0"
+                        Background="{ThemeResource SystemChromeLowColor}"
+                        CornerRadius="0">
+                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF44F;" />
+                    </Button>
+                    <Button
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Background="{ThemeResource SystemChromeLowColor}"
+                        CornerRadius="0">
+                        <Button.Flyout>
+                            <MenuFlyout Placement="Bottom">
+                                <MenuFlyoutItem Text="Open">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF42D;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Save">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF680;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Save as">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF682;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutItem Text="Settings">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF6AB;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="About">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF4A5;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                            </MenuFlyout>
+                        </Button.Flyout>
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon
+                                Margin="0,0,5,0"
+                                FontFamily="FluentSystemIcons-Regular"
+                                Glyph="&#xF561;" />
+                            <TextBlock VerticalAlignment="Center">Menu</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+                <TextBlock
+                    x:Name="FileName"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    text.rtf
+                </TextBlock>
+            </Grid>
+            <Grid
+                Height="50"
+                Margin="0,0,0,15"
+                VerticalAlignment="Bottom">
+
+                <StackPanel
+                    x:Name="SecondLine"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal">
+                    <StackPanel x:Name="ExpandedPasteOptions" Orientation="Horizontal">
+                        <Button Margin="5,0,0,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF2D5;" />
+                        </Button>
+                        <Button Margin="0,0,0,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF32B;" />
+                        </Button>
+                        <Button Margin="0,0,5,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF33A;" />
+                        </Button>
+                    </StackPanel>
+
+                    <controls:DropShadowPanel
+                        x:Name="FontPicker"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        BlurRadius="8"
+                        IsMasked="True"
+                        OffsetX="0"
+                        OffsetY="6.54"
+                        ShadowOpacity="0.06"
+                        Color="Black">
+                        <ComboBox
+                            Width="200"
+                            Background="{ThemeResource SystemAltMediumHighColor}"
+                            BorderThickness="0"
+                            Foreground="{ThemeResource SystemBaseHighColor}"
+                            PlaceholderForeground="{ThemeResource SystemBaseMediumColor}"
+                            PlaceholderText="Pick a font">
+                            <x:String>Montserrat</x:String>
+                            <x:String>Ostrich Sans</x:String>
+                            <x:String>Oswald</x:String>
+                            <x:String>Segoe UI</x:String>
+                        </ComboBox>
+                    </controls:DropShadowPanel>
+                    <controls:DropShadowPanel
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        BlurRadius="8"
+                        IsMasked="True"
+                        OffsetX="10"
+                        OffsetY="6.54"
+                        ShadowOpacity="0.06"
+                        Color="Black">
+                        <ComboBox
+                            Width="75"
+                            Margin="10,0,0,0"
+                            Background="{ThemeResource SystemAltMediumHighColor}"
+                            BorderThickness="0"
+                            Foreground="{ThemeResource SystemBaseHighColor}"
+                            IsEditable="True"
+                            PlaceholderForeground="{ThemeResource SystemBaseMediumColor}"
+                            PlaceholderText="12">
+                            <x:String>12</x:String>
+                            <x:String>14</x:String>
+                            <x:String>16</x:String>
+                            <x:String>18</x:String>
+                        </ComboBox>
+                    </controls:DropShadowPanel>
+                    <ToggleButton Margin="5,0,0,0" Background="Transparent">
+                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF7A4;" />
+                    </ToggleButton>
+                    <ToggleButton Margin="0,0,0,0" Background="Transparent">
+                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF7F4;" />
+                    </ToggleButton>
+                    <ToggleButton Margin="0,0,5,0" Background="Transparent">
+                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF80A;" />
+                    </ToggleButton>
+                    <Button Margin="0,0,5,0" Background="Transparent">
+                        <Button.Flyout>
+                            <MenuFlyout Placement="Bottom">
+                                <ToggleMenuFlyoutItem IsChecked="False" Text="Subscript" />
+                                <ToggleMenuFlyoutItem IsChecked="True" Text="Superscript" />
+
+
+                            </MenuFlyout>
+                        </Button.Flyout>
+                        <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF2A3;" />
+                    </Button>
+                    <StackPanel x:Name="ExpandedAlignments" Orientation="Horizontal">
+                        <FontIcon
+                            Margin="2,0,2,0"
+                            FontFamily="FluentSystemIcons-Regular"
+                            Foreground="{StaticResource SystemBaseHighColor}"
+                            Glyph="&#xF370;"
+                            Opacity="0.2" />
+                        <ToggleButton Margin="5,0,0,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF79F;" />
+                        </ToggleButton>
+                        <ToggleButton Margin="0,0,0,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF799;" />
+                        </ToggleButton>
+                        <ToggleButton Margin="0,0,0,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF7A1;" />
+                        </ToggleButton>
+                        <ToggleButton Margin="0,0,5,0" Background="Transparent">
+                            <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF79D;" />
+                        </ToggleButton>
+                    </StackPanel>
+                </StackPanel>
+                <Button
+                    Margin="0,0,5,0"
+                    HorizontalAlignment="Right"
+                    Background="Transparent">
+                    <Button.Flyout>
+                        <MenuFlyout Placement="Bottom">
+                            <MenuFlyoutItem Text="Image">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF48C;" />
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Paint 3D">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB42;" />
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutSeparator />
+                            <MenuFlyoutItem Text="Table">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF75F;" />
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Emoji">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF3E2;" />
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                        </MenuFlyout>
+                    </Button.Flyout>
+                    <FontIcon FontFamily="FluentSystemIcons-Regular" Glyph="&#xF1AA;" />
+                </Button>
+            </Grid>
+
+        </Grid>
+        <Grid
+            Margin="0,125,0,0"
+            HorizontalAlignment="Stretch"
+            Background="White">
+            <RichEditBox
+                x:Name="TextPanel"
+                HorizontalAlignment="Stretch"
+                Background="Transparent"
+                BorderThickness="0"
+                PlaceholderText="Start typing...">
+                <RichEditBox.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="Transparent" />
+                                <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Transparent" />
+                                <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="Transparent" />
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="Transparent" />
+                                <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="Transparent" />
+                                <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="Transparent" />
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </RichEditBox.Resources>
+            </RichEditBox>
+        </Grid>
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <!--  Large window VisualState  -->
+                <VisualState>
+
+                    <!--  Large window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="300" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ExpandedAlignments.Visibility" Value="Collapsed" />
+                        <Setter Target="ExpandedPasteOptions.Visibility" Value="Collapsed" />
+                        <Setter Target="SecondLine.HorizontalAlignment" Value="Left" />
+                        <Setter Target="TextPanel.Margin" Value="70,50,70,0" />
+                        <!--  Apply small template and styles  -->
+                        <Setter Target="FileName.Margin" Value="0,0,15,0" />
+                        <Setter Target="FileName.Visibility" Value="Collapsed" />
+                        <Setter Target="FontPicker.Margin" Value="15,0,0,0" />
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--  Medium window VisualState  -->
+                <VisualState>
+
+                    <!--  Medium window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <!--  Apply small template and styles  -->
+                        <Setter Target="FileName.Margin" Value="0,0,15,0" />
+                        <Setter Target="ExpandedAlignments.Visibility" Value="Visible" />
+                        <Setter Target="ExpandedPasteOptions.Visibility" Value="Collapsed" />
+                        <Setter Target="FontPicker.Margin" Value="15,0,0,0" />
+                        <Setter Target="SecondLine.HorizontalAlignment" Value="Center" />
+                        <Setter Target="TextPanel.Margin" Value="130,50,130,0" />
+
+                        <Setter Target="FileName.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--  Small window VisualState  -->
+                <VisualState>
+
+                    <!--  Small window trigger  -->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1200" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="FileName.Margin" Value="0,0,0,0" />
+                        <Setter Target="ExpandedAlignments.Visibility" Value="Visible" />
+                        <Setter Target="ExpandedPasteOptions.Visibility" Value="Visible" />
+                        <Setter Target="FontPicker.Margin" Value="0,0,0,0" />
+                        <Setter Target="SecondLine.HorizontalAlignment" Value="Center" />
+                        <Setter Target="TextPanel.Margin" Value="230,50,230,0" />
+
+                        <!--  Apply small template and styles  -->
+                        <Setter Target="FileName.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

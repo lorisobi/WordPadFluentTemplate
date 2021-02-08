@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.128
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPadFluentTemplate", "WordPadFluentTemplate\WordPadFluentTemplate.csproj", "{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM.Build.0 = Debug|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM.Deploy.0 = Debug|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x64.ActiveCfg = Debug|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x64.Build.0 = Debug|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x64.Deploy.0 = Debug|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x86.ActiveCfg = Debug|x86
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x86.Build.0 = Debug|x86
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Debug|x86.Deploy.0 = Debug|x86
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM.ActiveCfg = Release|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM.Build.0 = Release|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM.Deploy.0 = Release|ARM
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM64.Build.0 = Release|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|ARM64.Deploy.0 = Release|ARM64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x64.ActiveCfg = Release|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x64.Build.0 = Release|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x64.Deploy.0 = Release|x64
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x86.ActiveCfg = Release|x86
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x86.Build.0 = Release|x86
+		{AB2895B6-9A94-4EE4-837F-CBF335FA5A7F}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7EA6E85-BC4F-4F8B-A828-A32BA6FE5CA7}
+	EndGlobalSection
+EndGlobal
